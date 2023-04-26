@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { GalleryList, ProfileIcon, UserDetails } from '../../components/UI';
+import { GalleryList } from '../../components/UI';
 import pins from '../../../assets/data/pins';
 import { ScrollView } from '../../darkMode/ThemeComponents';
+import { ProfileIcon, UserDetails } from '../../components/ProfileScreen';
 
 const ProfileScreen = () => {
   return (

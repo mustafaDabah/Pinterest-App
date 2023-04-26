@@ -7,7 +7,7 @@ import Routes, {
   type PinScreenNavigationProp,
 } from '../../../constants/Routes';
 import { Text } from '../../../darkMode/ThemeComponents';
-import Popup from '../Popup/Popup';
+import ChooseBoardPopup from '../ChooseBoardPopup/ChooseBoardPopup';
 import { useState } from 'react';
 
 interface PinProps {
@@ -35,7 +35,7 @@ const Pin = ({ pin }: PinProps) => {
   return (
     <>
       {modalVisible && (
-        <Popup closeModal={closeModal} modalVisible={modalVisible} />
+        <ChooseBoardPopup closeModal={closeModal} modalVisible={modalVisible} />
       )}
       <Pressable onPress={goToPinPage}>
         <View style={styles.pin}>

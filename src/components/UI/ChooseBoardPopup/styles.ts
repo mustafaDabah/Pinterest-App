@@ -26,10 +26,10 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
     borderBottomColor: '#a3a3a3',
-    paddingBottom: 15,
-    borderBottomWidth: 1,
+    paddingBottom: 10,
+    borderBottomWidth: 0.5,
   },
   textStyle: {
     textAlign: 'center',
@@ -37,13 +37,12 @@ export const styles = StyleSheet.create({
   btnCreateNewBoard: {
     borderTopColor: '#a3a3a3',
     paddingTop: 15,
-    borderTopWidth: 1,
+    borderTopWidth: 0.5,
     flexDirection: 'row',
     justifyContent: 'center',
-    // alignContent: 'center',
-    position: 'absolute',
+    // position: 'absolute',
     bottom: 0,
-    width: '100%',
+    width: 320,
   },
   buttonText: {
     fontSize: 15,
