@@ -2,6 +2,9 @@ import { type ParamListBase, type RouteProp } from '@react-navigation/native';
 import { type NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export enum Routes {
+  LOGIN_SCREEN = 'login screen',
+  SIGNUP_SCREEN = 'signup screen',
+
   ROOT_TAB = 'Root Tab',
   HOME_TAB = 'Home Tab',
   CREATE_PIN_TAB = 'Create tap',
@@ -11,14 +14,16 @@ export enum Routes {
   SETTINGS_SCREEN = 'Settings screen',
 }
 
-export interface RootStackParamList extends ParamListBase {
-  AuthStack: undefined;
-  AppStack: undefined;
-}
+// export interface RootStackParamList extends ParamListBase {
+//   AuthStack: undefined;
+//   AppStack: undefined;
+// }
 
 export interface AuthStackParamList extends ParamListBase {
-  SignIn: undefined;
-  SignUp: undefined;
+  [Routes.LOGIN_SCREEN]: undefined;
+  [Routes.SIGNUP_SCREEN]: undefined;
+  // SignIn: undefined;
+  // SignUp: undefined;
 }
 
 export interface AppStackParamList extends ParamListBase {
@@ -30,27 +35,18 @@ export interface AppStackParamList extends ParamListBase {
   [Routes.SETTINGS_SCREEN]: undefined;
 }
 
-export type AuthScreenNavigationProp =
-  NativeStackNavigationProp<AuthStackParamList>;
-export type AuthScreenRouteProp = RouteProp<
-  AuthStackParamList,
-  'SignIn' | 'SignUp'
->;
+export type AuthScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList>;
 
-export type HomeScreenNavigationProp =
-  NativeStackNavigationProp<AppStackParamList>;
+export type AuthScreenRouteProp = RouteProp<AuthStackParamList, 'login screen' | 'signup screen'>;
+
+export type HomeScreenNavigationProp = NativeStackNavigationProp<AppStackParamList>;
 
 export type HomeScreenRouteProp = RouteProp<AppStackParamList, 'Home'>;
 
-export type PinScreenNavigationProp =
-  NativeStackNavigationProp<AppStackParamList>;
+export type PinScreenNavigationProp = NativeStackNavigationProp<AppStackParamList>;
 
-export type PinScreenRouteProp = RouteProp<
-  AppStackParamList,
-  Routes.PIN_SCREEN
->;
+export type PinScreenRouteProp = RouteProp<AppStackParamList, Routes.PIN_SCREEN>;
 
-export type SettingsScreenNavigationProp =
-  NativeStackNavigationProp<AppStackParamList>;
+export type SettingsScreenNavigationProp = NativeStackNavigationProp<AppStackParamList>;
 
 export default Routes;

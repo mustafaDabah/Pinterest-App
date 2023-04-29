@@ -7,7 +7,7 @@
     "plugin:react/recommended",
     "standard-with-typescript",
     "airbnb-typescript",
-    "prettier",
+    // "prettier",
     "plugin:prettier/recommended"
   ],
   "overrides": [],
@@ -26,7 +26,7 @@
     "react-native/no-raw-text": [
       "warn",
       {
-        "skip": ["CustomText" , "Link"]
+        "skip": ["CustomText" , "Link", "MainText"]
       }
     ],
     "react-native/no-single-element-style-arrays": "warn",

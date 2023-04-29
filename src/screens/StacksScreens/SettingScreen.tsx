@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
 import { Text, View } from '../../darkMode/ThemeComponents';
 import { SwitchTheme } from '../../components/UI';
+import { styles } from './styles';
 
 const SettingScreen = () => {
   return (
@@ -12,11 +12,3 @@ const SettingScreen = () => {
 };
 
 export default SettingScreen;
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: 'white',
-    height: '100%',
-  },
-});

@@ -1,6 +1,7 @@
-import { View, StyleSheet, Button, TextInput, Image } from 'react-native';
+import { View, Button, TextInput, Image } from 'react-native';
 import { useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
+import { styles } from './styles';
 
 const CreatePinScreen = () => {
   const [imageUri, setImageUri] = useState<null | string>(null);
@@ -17,8 +18,6 @@ const CreatePinScreen = () => {
       setImageUri(result.assets[0].uri);
     }
   };
-
-  console.log(imageUri);
 
   return (
     <View style={styles.root}>
@@ -40,24 +39,3 @@ const CreatePinScreen = () => {
 };
 
 export default CreatePinScreen;
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 10,
-  },
-  image: {
-    width: '100%',
-    aspectRatio: 1,
-    marginVertical: 10,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: 'gainsboro',
-    padding: 5,
-    width: '100%',
-    borderRadius: 5,
-  },
-});

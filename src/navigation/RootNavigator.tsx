@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Routes, { type RootStackParamList } from '../constants/Routes';
-import { PinScreen, SettingScreen } from '../screens';
+import Routes from '../constants/Routes';
+import { LoginScreen, PinScreen, SettingScreen, SignupScreen } from '../screens';
 import Tabs from './Tabs';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -12,15 +12,18 @@ const RootNavigator = () => {
         headerShown: false,
         presentation: 'transparentModal',
       }}>
-      <Stack.Screen name={Routes.ROOT_TAB} component={Tabs} />
-      <Stack.Screen name={Routes.PIN_SCREEN} component={PinScreen} />
+      <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
+      <Stack.Screen name={Routes.SIGNUP_SCREEN} component={SignupScreen} />
+
       <Stack.Screen
-        name={Routes.SETTINGS_SCREEN}
+        name={Routes.ROOT_TAB}
+        component={Tabs}
         options={{
           headerShown: true,
         }}
-        component={SettingScreen}
       />
+      <Stack.Screen name={Routes.PIN_SCREEN} component={PinScreen} />
+      <Stack.Screen name={Routes.SETTINGS_SCREEN} component={SettingScreen} />
     </Stack.Navigator>
   );
 };
