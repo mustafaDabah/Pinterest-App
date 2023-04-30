@@ -12,8 +12,8 @@ const RootNavigator = () => {
         headerShown: false,
         presentation: 'transparentModal',
       }}>
-      <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
       <Stack.Screen name={Routes.SIGNUP_SCREEN} component={SignupScreen} />
+      <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
 
       <Stack.Screen
         name={Routes.ROOT_TAB}

@@ -5,6 +5,7 @@ import { Text, TextInput } from '../../darkMode/ThemeComponents';
 import { Link } from '@react-navigation/native';
 import { Routes } from '../../constants';
 import { styles } from './styles';
+import { Title } from '../../components/Auth';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -21,11 +22,18 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <EvilIcons name="sc-pinterest" size={84} color="#b8001c" />
-      <Text style={styles.title}>Welcome to Pinterest</Text>
+      <Title title="Welcome" subTitle="Welcome again! let's start the journey." />
       <View style={styles.inputContainer}>
         {/* --USER EMAIL-- */}
-        <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" autoCorrect={false} />
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
+        />
         {/* --PASSWORD CONTAINER-- */}
         <View style={styles.passwordContainer}>
           <TextInput

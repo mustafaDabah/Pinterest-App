@@ -7,13 +7,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fdfdfd',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginVertical: 32,
-    textAlign: 'left',
-    width: '90%',
-  },
   inputContainer: {
     width: '90%',
   },
