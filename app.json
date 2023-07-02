@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.mustafadabah55.Pinterest"
+      "package": "com.mustafadabah55.myapp"
     },
     "web": {
       "bundler": "metro",
@@ -30,8 +30,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "84754b04-c3a1-49d5-973f-ba2213ab0210"
+        "projectId": "83110c23-192f-4996-8360-727735c3209f"
       }
-    }
+    },
+    "owner": "mustafadabah55"
   }
 }
