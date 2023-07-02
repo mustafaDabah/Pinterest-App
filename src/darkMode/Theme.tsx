@@ -19,8 +19,6 @@ export const useDarkMode = (): DarkModeContextTypes => {
 export const DarkModeProvider: React.FC<Props> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
-  console.log(isDarkMode);
-
   useLayoutEffect(() => {
     async function loadDarkModeSetting() {
       const value = await AsyncStorage.getItem('darkMode');
@@ -57,9 +55,5 @@ export const DarkModeProvider: React.FC<Props> = ({ children }) => {
     },
   });
 
-  return (
-    <DarkModeContext.Provider value={{ isDarkMode, darkStyles, toggleMode }}>
-      {children}
-    </DarkModeContext.Provider>
-  );
+  return <DarkModeContext.Provider value={{ isDarkMode, darkStyles, toggleMode }}>{children}</DarkModeContext.Provider>;
 };

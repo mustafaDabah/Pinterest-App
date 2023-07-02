@@ -25,9 +25,7 @@ function Tabs() {
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="home-outline" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Ionicons name="home-outline" size={24} color={color} />,
         }}
       />
       <Tab.Screen
@@ -35,9 +33,7 @@ function Tabs() {
         component={CreatePinScreen}
         options={{
           title: 'Create Pin',
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="add-sharp" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Ionicons name="add-sharp" size={24} color={color} />,
         }}
       />
       <Tab.Screen
@@ -45,9 +41,7 @@ function Tabs() {
         component={ProfileScreen}
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="user" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
         }}
       />
     </Tab.Navigator>

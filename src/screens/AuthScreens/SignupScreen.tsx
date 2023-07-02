@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Text as MainText, View, TouchableOpacity } from 'react-native';
-import { Text, TextInput } from '../../darkMode/ThemeComponents';
+import { Text as MainText, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View } from '../../darkMode/ThemeComponents';
 import { Link } from '@react-navigation/native';
 import { Routes } from '../../constants';
 import { styles } from './styles';

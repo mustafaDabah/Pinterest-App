@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.mustafadabah55.myapp"
+      "package": "com.mustafadabah55.Pinterest"
     },
     "web": {
       "bundler": "metro",

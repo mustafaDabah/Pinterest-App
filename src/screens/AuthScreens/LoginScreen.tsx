@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Text as MainText, View, TouchableOpacity } from 'react-native';
+import { Text as MainText, TouchableOpacity } from 'react-native';
 import { Ionicons, EvilIcons } from '@expo/vector-icons';
-import { Text, TextInput } from '../../darkMode/ThemeComponents';
+import { Text, TextInput, View } from '../../darkMode/ThemeComponents';
 import { Link } from '@react-navigation/native';
 import { Routes } from '../../constants';
 import { styles } from './styles';
 import { Title } from '../../components/Auth';
+import { useAuth } from '../../context/AuthContext';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -63,6 +64,10 @@ const LoginScreen = () => {
             Sign up
           </Link>
         </TouchableOpacity>
+        <Link to={{ screen: Routes.ROOT_TAB }} style={styles.signupLinkText}>
+          {' '}
+          go to Home
+        </Link>
       </View>
     </View>
   );
